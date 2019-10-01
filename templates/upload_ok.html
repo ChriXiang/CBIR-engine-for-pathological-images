@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CBIR</title>
+</head>
+<body bgcolor="#F0F0F0">
+    <!-- navigation bar -->
+    <div style="position:absolute; width:300px; height:80px; left:600px; top:20px;">
+        <input type="button" id="goto_db" class="modify" name="modifytip" value="query" onclick='location.href=("upload")'/>
+        <input type="button" id="goto_upload" class="modify" name="modifytip" value="Database" onclick='location.href=("db")'/>
+    </div>
+
+
+    <!-- <h1>CBIR</h1> -->
+    <div style="position:absolute; width:100px; height:200px; left:245px; top:50px;">
+    <form action="" enctype='multipart/form-data' method='POST'>
+        <input type="file" name="file" style="margin-top:20px; font-size: 16px;"/>
+        <br>
+        <input type="submit" value="search" class="button-new" style=" position:relative; left:50px; margin-top:15px; font-size: 25px;"/>
+    </form>
+    </div>
+    <!-- query -->
+    <div style="position:absolute; width:100px; height:100px; left:140px; top:200px;">
+    <div style="position:absolute; width:200px; height:100px; bottom:31px; left:130px; font-size: 23px;">
+        {{qname}}
+    </div>
+    <img src="{{ url_for('static', filename=qpath) }}" 
+    width="350" height="350" alt="why there is no vision?" />
+    </div>
+    <!-- ans0 -->
+    <div style="position:absolute; width:100px; height:100px; left:600px; top:100px;">
+    <div style="position:absolute; width:200px; height:100px; bottom:20px; left:70px; font-size: 15px;">
+        {{name0}}
+    </div>
+    <img src="{{url_for('static', filename=ans0)}}" 
+    width="250" height="250" alt="why there is no vision?" />
+    </div>
+
+    <!-- ans1 -->
+    <div style="position:absolute; width:100px; height:100px; left:950px; top:100px;">
+    <div style="position:absolute; width:200px; height:100px; bottom:20px; left:70px; font-size: 15px;">
+        {{name1}}
+    </div>
+    <img src="{{url_for('static', filename=ans1)}}" 
+    width="250" height="250" alt="why there is no vision?" />
+    </div>
+    <!-- ans2 -->
+    <div style="position:absolute; width:100px; height:100px; left:600px; top:400px;">
+    <div style="position:absolute; width:200px; height:100px; bottom:20px; left:70px; font-size: 15px;">
+        {{name2}}
+    </div>
+    <img src="{{url_for('static', filename=ans2)}}" 
+    width="250" height="250" alt="why there is no vision?" />
+    </div>
+    <!-- ans3 -->
+    <div style="position:absolute; width:100px; height:100px; left:950px; top:400px;">
+    <div style="position:absolute; width:200px; height:100px; bottom:20px; left:70px; font-size: 15px;">
+        {{name3}}
+    </div>
+    <img src="{{url_for('static', filename=ans3)}}" 
+    width="250" height="250" alt="why there is no vision?" />
+    </div>
+</body>
+</html>

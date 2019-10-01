@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CBIR</title>
+</head>
+<body bgcolor="#F0F0F0">
+    <!-- <h1>CBIR</h1> -->
+    <div style="position:absolute; width:300px; height:80px; left:600px; top:20px;">
+        <input type="button" id="goto_db" class="modify" name="modifytip" value="query" onclick='location.href=("upload")'/>
+        <input type="button" id="goto_upload" class="modify" name="modifytip" value="Database" onclick='location.href=("db")'/>
+    </div>
+        <!-- img1 -->
+        <div style="position:absolute; width:100px; height:100px; left:90px; top:100px;">
+        <div style="position:absolute; width:200px; height:100px; bottom:20px; left:70px; font-size: 15px;">
+            {{img1}}
+        </div>
+
+        <img src="{{url_for('static', filename=ip1)}}" 
+        width="250" height="250" alt="why there is no vision?" />
+        </div>
+
+        <!-- img2 -->
+        <div style="position:absolute; width:100px; height:100px; left:390px; top:100px;">
+        <div style="position:absolute; width:200px; height:100px; bottom:20px; left:70px; font-size: 15px;">
+            {{img2}}
+        </div>
+        <img src="{{url_for('static', filename=ip2)}}" 
+        width="250" height="250" alt="why there is no vision?" />
+        </div>
+
+        <!-- img3 -->
+        <div style="position:absolute; width:100px; height:100px; left:690px; top:100px;">
+        <div style="position:absolute; width:200px; height:100px; bottom:20px; left:70px; font-size: 15px;">
+            {{img3}}
+        </div>
+        <img src="{{url_for('static', filename=ip3)}}" 
+        width="250" height="250" alt="why there is no vision?" />
+        </div>
+
+        <!-- img4 -->
+        <div style="position:absolute; width:100px; height:100px; left:990px; top:100px;">
+        <div style="position:absolute; width:200px; height:100px; bottom:20px; left:70px; font-size: 15px;">
+            {{img4}}
+        </div>
+        <img src="{{url_for('static', filename=ip4)}}" 
+        width="250" height="250" alt="why there is no vision?" />
+        </div>
+
+        <!-- img5 -->
+        <div style="position:absolute; width:100px; height:100px; left:90px; top:400px;">
+        <div style="position:absolute; width:200px; height:100px; bottom:20px; left:70px; font-size: 15px;">
+            {{img5}}
+        </div>
+        <img src="{{url_for('static', filename=ip5)}}" 
+        width="250" height="250" alt="why there is no vision?" />
+        </div>
+
+        <!-- img6 -->
+        <div style="position:absolute; width:100px; height:100px; left:390px; top:400px;">
+        <div style="position:absolute; width:200px; height:100px; bottom:20px; left:70px; font-size: 15px;">
+            {{img6}}
+        </div>
+        <img src="{{url_for('static', filename=ip6)}}" 
+        width="250" height="250" alt="why there is no vision?" />
+        </div>
+
+        <!-- img7 -->
+        <div style="position:absolute; width:100px; height:100px; left:690px; top:400px;">
+        <div style="position:absolute; width:200px; height:100px; bottom:20px; left:70px; font-size: 15px;">
+            {{img7}}
+        </div>
+        <img src="{{url_for('static', filename=ip7)}}" 
+        width="250" height="250" alt="why there is no vision?" />
+        </div>
+
+        <!-- img8 -->
+        <div style="position:absolute; width:100px; height:100px; left:990px; top:400px;">
+        <div style="position:absolute; width:200px; height:100px; bottom:20px; left:70px; font-size: 15px;">
+            {{img8}}
+        </div>
+        <img src="{{url_for('static', filename=ip8)}}" 
+        width="250" height="250" alt="why there is no vision?" />
+        </div>
+
+
+        <div style="position:absolute; width:300px; height:80px; left:570px; bottom:3px;">
+        <form method="POST" name = "form2">
+        <input type="submit" name="last" value="Last Page"/>
+        <input type="hidden" name = "cur" value = "{{ CUR }}"/>
+        <a>{{ INDEX }} / {{ ALL }}</a>
+        <input type="submit" name="next" value="Next Page"/>
+        </form>
+        </div>
+
+</body>
+</html>
